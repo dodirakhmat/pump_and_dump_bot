@@ -2,8 +2,8 @@ require "rest-client"
 require "colorize"
 require "json"
 BASE_URL = "https://bittrex.com/api/v1.1/"
-API_KEY = "<YOUR_API_KEY>"
-API_SECRET = "<YOUR_API_SECRET>"
+API_KEY = "76944ab3dfc24550bacc58a2cffd70c8"
+API_SECRET = "e780ba6ddf9c40ad90293b2cdf5fe059"
 @units_bought = 0
 @currency = ARGV[0]
 @market_name = "BTC-"+@currency
@@ -298,9 +298,9 @@ def sell_at_any_cost(percent_decrease = 0.3)
   sell_order = sell_bot(percent_decrease)
 end
 
-buy_bot(0.05, 0.006, 0.5) if BOT_TYPE == 1
+buy_bot(0.15, 0.006, 0.5) if BOT_TYPE == 1
 sell_order = sell_bot(0.1) if BOT_TYPE == 2
-buy_sell_bot(0.05, 0.012, 0.5, 0.1, 2) if BOT_TYPE == 3
+buy_sell_bot(0.05, 0.006, 0.5, 0.15, 1) if BOT_TYPE == 3
 sell_at_any_cost(0.3) if BOT_TYPE == 4
 buy_all_bot(0.05, 0.006, 0.5) if BOT_TYPE == 5
 sell_all_bot(0.2) if BOT_TYPE == 6

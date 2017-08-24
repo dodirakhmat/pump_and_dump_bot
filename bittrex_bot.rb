@@ -298,11 +298,11 @@ def sell_at_any_cost(percent_decrease = 0.3)
   sell_order = sell_bot(percent_decrease)
 end
 
-buy_bot(0.15, 0.006, 0.5) if BOT_TYPE == 1
+buy_bot(0.15, 0.006, 10) if BOT_TYPE == 1
 sell_order = sell_bot(0.1) if BOT_TYPE == 2
-buy_sell_bot(0.05, 0.006, 0.5, 0.15, 1) if BOT_TYPE == 3
+buy_sell_bot(0.05, 0.006, 10, 0.15, 1) if BOT_TYPE == 3
 sell_at_any_cost(0.3) if BOT_TYPE == 4
-buy_all_bot(0.05, 0.006, 0.5) if BOT_TYPE == 5
+buy_all_bot(0.05, 0.006, 10) if BOT_TYPE == 5
 sell_all_bot(0.2) if BOT_TYPE == 6
 cancel_all_bot if BOT_TYPE == 7
 
